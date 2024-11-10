@@ -1,6 +1,13 @@
 /* eslint-disable prettier/prettier */
-export const orthographyCheckUseCase = async( ) => {
+
+interface Options{
+    prompt: string;
+}
+export const orthographyCheckUseCase = async( options: Options) => {
+    
+    const {prompt} = options;
+
     return {
-        hola:'Mundo desde UseCase'
+        prompt: prompt
     }
 }
