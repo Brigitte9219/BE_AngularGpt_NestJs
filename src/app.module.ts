@@ -1,7 +1,12 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { GptModule } from './gpt/gpt.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [GptModule]
+  imports: [
+    ConfigModule.forRoot(),
+    GptModule,
+  ]
 })
 export class AppModule {}
